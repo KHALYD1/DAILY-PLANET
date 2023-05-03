@@ -1,6 +1,8 @@
 nav {
-       background-color: grey;
+       background-color: whitesmoke;
        overflow: hidden;
+        
+       
      }
      
      ul {
@@ -27,4 +29,6 @@ nav {
        background-color: darkgrey;
        color: black;
      }
+
+     
      

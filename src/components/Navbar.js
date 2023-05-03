@@ -6,12 +6,12 @@ function Navbar() {
     <nav>
         <img 
                             id='image'
-                            src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwnusSVuYqQBTa-skLMxqSUhn3lKHTI_-WBnEFyqcfJMsasJvAWjwjR9yqCJ3HArhtnQ&usqp=CAU'
-                   />
+                            src='https://www.seekpng.com/png/detail/272-2720223_daily-planet-logo-1932-prototype-by-noahlc-superman.png'
+                     />
       <ul>
         <li><a href='#home'>Home</a></li>
         <li><a href='#news'>News</a></li>
-        <li><a href='aAbout'>About</a></li>
+        <li><a href='#about'>About Us</a></li>
       </ul>
     </nav>
   );

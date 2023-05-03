@@ -38,5 +38,5 @@ const Wrapper = styled.footer`
   }
 `;
 
-// Export the Footer component as the default export
+
 export default Footer;

@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Aboutus from './components/Aboutus';
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
     <div className="App" >
       <Navbar />
       <header className="App-header">
-        
+      <Aboutus /> 
       </header>
       <Footer />
     </div>

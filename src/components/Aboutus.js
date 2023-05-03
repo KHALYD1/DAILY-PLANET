@@ -11,10 +11,10 @@ function Aboutus() {
         <div className="description">
           <h2>Khalid Abdi</h2>
           <p>Senior Developer at The Daily Planet</p>
-          <p>Email @ khalyddyce@icloud.com
+          <p>Email @ khalyddyce@icloud.com<p/>
               <h3>Dominic Juma</h3>
               <p>Senior Developer at The Daily Planet</p>
-              <p>Email @ </p>
+              <p>Email @ jumawafuladominic@gmail.com</p>
               <h4>Geofrey Terget</h4>
               <p>Senior Developer at The Daily Planet</p>
               <p>Email @ georeece000@gmail.com </p>

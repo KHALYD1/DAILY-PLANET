@@ -1,5 +1,5 @@
 nav {
-       background-color: whitesmoke;
+       background-color: grey;
        overflow: hidden;
      }
      
@@ -16,7 +16,7 @@ nav {
      }
      
      a {
-       display: ;
+       display: inline-block;
        color: black;
        text-align: center;
        padding: 8px 9px;

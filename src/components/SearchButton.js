@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './SearchButton.css';
 
 function SearchButton({handleSearch}) {
 

@@ -1,7 +1,7 @@
 import './App.css';
-import Search from './components/search/SearchButton'
+import Search from './components/SearchButton'
 import { useState } from 'react';
-import SearchButton from './components/search/SearchButton';
+import SearchButton from './components/SearchButton';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -16,6 +16,7 @@ function App() {
   }
   return (
     <div className="App" >
+      <Navbar />
 
       <SearchButton handleSearch={handleSearch} />
       <ul>
@@ -24,7 +25,7 @@ function App() {
         ))}
       </ul>
 
-      <Navbar />
+      
 
       <header className="App-header">
       <Aboutus /> 

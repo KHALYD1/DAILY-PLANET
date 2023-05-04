@@ -1,11 +1,24 @@
 import React, { useState } from 'react';
-import './SearchButton.css';
+import styled from 'styled-components';
+
+const Button = styled.button`
+  /* Adapt the colors based on primary prop */
+  background: ${props => props.$primary ? "black" : "black"};
+  color: ${props => props.$primary ? "white" : "palevioletred"};
+
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid black;
+  border-radius: 3px;
+  
+`;
+
+
 
 function SearchButton({handleSearch}) {
 
     const [inputValue, setInputValue] = useState("")
-
-
 
     return (
         <div>
@@ -23,11 +36,12 @@ function SearchButton({handleSearch}) {
 
             }}>
                 <input type="text" placeholder="Search news" value={inputValue} onChange={(e) => setInputValue(e.target.value)}></input>
-                <button type="submit">Search</button>
+                <Button type="submit" $primary>Search</Button>
             </form>
         </div>
     )
 }
 
-
 export default SearchButton;
+
+

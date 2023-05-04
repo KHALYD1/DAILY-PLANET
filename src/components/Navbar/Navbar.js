@@ -25,7 +25,7 @@
 
 import React from 'react';
 import './navbar.css';
-import SearchButton from '../SearchButton/SearchButton';
+
 
 function Navbar() {
   return (
@@ -38,7 +38,7 @@ function Navbar() {
         <li><a href='#home'>Home</a></li>
         <li><a href='#news'>News</a></li>
         <li><a href='#about'>About Us</a></li>
-        <li><SearchButton /></li>
+        
       </ul>
     </nav>
   );

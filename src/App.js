@@ -14,19 +14,18 @@ function App() {
   return (
     <div className="App" >
       <Navbar />
-      {/* <SearchButton handleSearch={handleSearch} />
+      <SearchButton handleSearch={handleSearch} />
       <ul>
         {searchResults.map((result) => (
           <li key={result.id}>{result.title}</li>
         ))}
-      </ul> */}
+      </ul>
       < Hero />
       < News/>
 
       <header className="App-header">
       <Aboutus />
       </header>
-      <Footer />
     </div>
   );
 }

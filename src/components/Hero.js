@@ -8,3 +8,13 @@ function Hero() {
         alt="Daily Planet"
         className="hero-image"
       />
+
+<div className="hero-text">
+        <h1>Welcome to the Daily Planet</h1>
+        <p>Breaking news and analysis on politics, business, world national news, entertainment and more</p>
+      </div>
+    </div>
+  );
+}
+
+export default Hero;

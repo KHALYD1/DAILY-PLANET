@@ -11,3 +11,21 @@ function News() {
       .then((data) => setNews(data.articles))
       .catch((error) => console.log(error));
   }, []);
+
+  return (
+    <div>
+      <h1>Top Headlines</h1>
+      <ul>
+        {news.map((article) => (
+          <li key={article.title}>
+            <h2>{article.title}</h2>
+            <p>{article.description}</p>
+            <a href={article.url}>Read more</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default News;

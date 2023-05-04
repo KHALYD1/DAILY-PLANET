@@ -1,11 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
-import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Search from './components/search/SearchButton'
+import { useState } from 'react';
+import SearchButton from './components/search/SearchButton';
 
 function App() {
+  const [searchResults, setSearchResults] = useState([])
+
+  const handleSearch = (data) => {
+    setSearchResults(data)
+  }
   return (
-    <div className="App">
-      <Navbar />
+    <div className="App" >
+      <SearchButton handleSearch={handleSearch} />
+      <ul>
+        {searchResults.map((result) => (
+          <li key={result.id}>{result.title}</li>
+        ))}
+      </ul>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

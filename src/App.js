@@ -1,9 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import Footer from './components/Footer';
 import Search from './components/search/SearchButton'
 import { useState } from 'react';
 import SearchButton from './components/search/SearchButton';
+
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Aboutus from './components/Aboutus';
+
 
 function App() {
   const [searchResults, setSearchResults] = useState([])
@@ -13,25 +16,18 @@ function App() {
   }
   return (
     <div className="App" >
+
       <SearchButton handleSearch={handleSearch} />
       <ul>
         {searchResults.map((result) => (
           <li key={result.id}>{result.title}</li>
         ))}
       </ul>
+
+      <Navbar />
+
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <Aboutus /> 
       </header>
       <Footer />
     </div>

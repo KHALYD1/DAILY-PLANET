@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+// Define the Footer component
 const Footer = () => {
     return (
         <Wrapper>
@@ -11,6 +12,7 @@ const Footer = () => {
     );
 };
 
+// Define the Wrapper styled component
 const Wrapper = styled.footer`
   height: 5rem;
   display: flex;
@@ -35,5 +37,6 @@ const Wrapper = styled.footer`
     flex-direction: row;
   }
 `;
+
 
 export default Footer;

@@ -4,10 +4,14 @@ This is a simple React application that displays the news articles from various 
 
 ## Features
 
-* Browse news articles from different sources
-* Search for specific news topics
-* Filter news articles by category
-* Sort news articles by date or popularity
+* Browse news articles from different sources: Users can browse articles from various sources such as CNN, BBC, New York Times, etc.
+* Search for specific news topics: Users can search for news articles related to specific topics.
+* Filter news articles by category: Users can filter articles by category such as business, entertainment, health, science, sports, and technology.
+
+* Sort news articles by date or popularity:  Users can sort articles by date or popularity to quickly find the most recent or most popular articles.
+
+## Installation
+
 
 ## Installation
 

@@ -1,18 +1,25 @@
 import './App.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 import { useState } from 'react';
-import SearchButton from './components/SearchButton/SearchButton';
-import Navbar from './components/Navbar/Navbar';
+import { BrowserRouter, Route } from 'react-router-dom';
+
+import './App.css';
+
+import SearchButton from './components/SearchButton/SearchButton';import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Aboutus from './components/About Us/Aboutus';
 import News from './components/News/News';
 import Hero from './components/Hero/Hero';
 function App() {
-  const [searchResults, setSearchResults] = useState([])
+  const [searchResults, setSearchResults] = useState([]);
   const handleSearch = (data) => {
-    setSearchResults(data)
-  }
+    setSearchResults(data);
+  };
+
   return (
-    <div className="App" >
+    <div className="App">
       <Navbar />
       <SearchButton handleSearch={handleSearch} />
       <ul>
@@ -20,14 +27,32 @@ function App() {
           <li key={result.id}>{result.title}</li>
         ))}
       </ul>
-      < Hero />
-      < News/>
-
+      <Hero />
+      <News />
       <header className="App-header">
-      <Aboutus />
+        <Aboutus />
       </header>
     </div>
   );
 }
+
+ReactDOM.render(
+  <App>
+  <BrowserRouter>
+      <Route exact path="/aboutus">
+        <Aboutus />
+      </Route>
+      <Route exact path="/news">
+        <News />
+      </Route>
+      <Route exact path="/footer">
+        <Footer />
+      </Route>
+      <Route exact path="/">
+      </Route>
+  </BrowserRouter>
+  </App>,
+  document.getElementById('root')
+);
 export default App;
 

@@ -1,73 +1,59 @@
-# Getting Started with Create React App
+# React News App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple React application that displays the news articles from various sources. 
 
-## Available Scripts
+Since news is part of communication that informs what is happening. We developed this website to keep each human informed of the chaning event, issues and characters in the world.Though it may be interesting or even entertaining, the foremost value of news is as a utility to empower the informed.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+* Browse news articles from different sources: Users can browse articles from various sources such as CNN, BBC, New York Times, etc.
+* Search for specific news topics: Users can search for news articles related to specific topics.
+* Filter news articles by category: Users can filter articles by category such as business, entertainment, health, science, sports, and technology.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Sort news articles by date or popularity:  Users can sort articles by date or popularity to quickly find the most recent or most popular articles.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. To run this application locally,you need to 'clone' this repository to your local machine by running the following command:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+     'git clone' git@github.com:KHALYD1/daily-planet.git
 
-### `npm run build`
+2. After cloning the repo, navigate to the project directory.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+     'cd' daily-planet
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3.  Install the dependancies by running the following command:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+     npm install
 
-### `npm run eject`
+4. Finally,start the application by running this command:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+     npm run start or npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ NOTE: This will start the development server and open the application in your default web browser.
+   
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## API
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This application uses the [NewsAPI](https://newsapi.org/) to fetch news articles. 
 
-## Learn More
+You need to obtain an API key from NewsAPI to use this application.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+REACT_APP_NEWS_API_KEY=your-api-key
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Contributors
+Senior Developer @ The Daily Planet
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Khalid Abdi, [Email](khalyddyce@icloud.com)
+2. Dominic Juma, [Email](jumawafuladominic@gmail.com)
+3. Geofrey Tegeret, [Email](georeece000@gmail.com)
 
-### Analyzing the Bundle Size
+Contributions to this project are welcome. If you find a bug or have a feature request, please open an issue or submit a pull request on the project's GitHub repository.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
 

@@ -20,6 +20,8 @@ const NavMenu = styled.ul`
   padding: 50px;
   font-size: 30px;
   text-decoration: underline;
+  justify-content: space-between;
+  gap: 30px;
   
 `;
 

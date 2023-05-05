@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 
@@ -7,18 +6,23 @@ const NewsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
+  background-color: silver;
 `;
 
 const NewsHeading = styled.h1`
-  font-size: 32px;
+  font-size: 45px;
   font-weight: bold;
   margin-bottom: 20px;
+  text-decoration: underline;
 `;
 
 const NewsList = styled.ol`
   margin: 0;
   padding: 0;
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 `;
 
 const NewsItem = styled.li`

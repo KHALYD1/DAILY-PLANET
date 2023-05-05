@@ -2,6 +2,8 @@
 
 This is a simple React application that displays the news articles from various sources. 
 
+Since news is part of communication that informs what is happening. We developed this website to keep each human informed of the chaning event, issues and characters in the world.Though it may be interesting or even entertaining, the foremost value of news is as a utility to empower the informed.
+
 ## Features
 
 * Browse news articles from different sources: Users can browse articles from various sources such as CNN, BBC, New York Times, etc.
@@ -33,7 +35,12 @@ This is a simple React application that displays the news articles from various 
 
 ## API
 
-This application uses the [NewsAPI](https://newsapi.org/) to fetch news articles.
+This application uses the [NewsAPI](https://newsapi.org/) to fetch news articles. 
+
+You need to obtain an API key from NewsAPI to use this application.
+
+REACT_APP_NEWS_API_KEY=your-api-key
+
 
 ## Contributors
 Senior Developer @ The Daily Planet
@@ -42,7 +49,7 @@ Senior Developer @ The Daily Planet
 2. Dominic Juma, [Email](jumawafuladominic@gmail.com)
 3. Geofrey Tegeret, [Email](georeece000@gmail.com)
 
-Contributions are welcome! Please open an issue or submit a pull request.
+Contributions to this project are welcome. If you find a bug or have a feature request, please open an issue or submit a pull request on the project's GitHub repository.
 
 ## License
 

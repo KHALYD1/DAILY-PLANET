@@ -12,14 +12,24 @@ This is a simple React application that displays the news articles from various 
 
 ## Installation
 
+1. To run this application locally,you need to 'clone' this repository to your local machine by running the following command:
 
-## Installation
+     'git clone' git@github.com:KHALYD1/daily-planet.git
 
-To run this application locally, clone this repository and run the following commands:
-       
-  1. 'npm install'   
-  2. 'npm run start or npm start'
+2. After cloning the repo, navigate to the project directory.
 
+     'cd' daily-planet
+
+3.  Install the dependancies by running the following command:
+
+     npm install
+
+4. Finally,start the application by running this command:
+
+     npm run start or npm start
+
+ NOTE: This will start the development server and open the application in your default web browser.
+   
 
 ## API
 

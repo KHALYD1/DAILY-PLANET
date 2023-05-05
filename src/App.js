@@ -1,3 +1,4 @@
+import './App.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -6,16 +7,13 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import './App.css';
 
-import SearchButton from './components/SearchButton';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Aboutus from './components/Aboutus';
-import News from './components/News';
-import Hero from './components/Hero';
-
+import SearchButton from './components/SearchButton/SearchButton';import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+import Aboutus from './components/About Us/Aboutus';
+import News from './components/News/News';
+import Hero from './components/Hero/Hero';
 function App() {
   const [searchResults, setSearchResults] = useState([]);
-
   const handleSearch = (data) => {
     setSearchResults(data);
   };
@@ -34,7 +32,6 @@ function App() {
       <header className="App-header">
         <Aboutus />
       </header>
-      <Footer />
     </div>
   );
 }
@@ -57,5 +54,5 @@ ReactDOM.render(
   </App>,
   document.getElementById('root')
 );
-
 export default App;
+

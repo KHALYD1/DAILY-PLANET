@@ -1,60 +1,117 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+
 const SearchWrapper = styled.div`
-  background-color: silver;
   display: flex;
-  justify-content: flex-end;
-  
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 10px;
 `;
 
-// const Button = styled.button`
-//   background: ${props => props.$primary ? "black" : "black"};
-//   color: ${props => props.$primary ? "white" : "palevioletred"};
-
-//   font-size: 1em;
-//   margin: 1em;
-//   padding: 0.25em 1em;
-//   border: 2px solid black;
-//   border-radius: 3px;
-// `;
-
-
-const Button = styled.button`
-  /* Adapt the colors based on primary prop */
-  background: ${props => props.$primary ? "black" : "black"};
-  color: ${props => props.$primary ? "white" : "palevioletred"};
-
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid black;
-  border-radius: 3px;
+const SearchInput = styled.input`
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+  width: 300px;
 `;
 
-function SearchButton({handleSearch}) {
-    const [inputValue, setInputValue] = useState("")
+const SearchButtonStyled = styled.button`
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 
-    return (
-        <SearchWrapper>
-            <form onSubmit={async (e) => {
-                e.preventDefault()
-                setInputValue("")
+  &:hover {
+    background-color: #222;
+  }
+`;
 
-                const response = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=615ef18cc55246f1b0516267e5a55737`)
-                const data = await response.json()
+const SearchResultWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+`;
 
-                handleSearch(data.articles)
+const SearchResultItem = styled.div`
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 600px;
+  margin-bottom: 20px;
+`;
 
-                const articleTitle = data.articles[0].title;
-                console.log(articleTitle); // prints the title of the first article in the response
+const SearchResultTitle = styled.h3`
+  font-size: 24px;
+  margin-bottom: 10px;
+`;
 
-            }}>
-                <input type="text" placeholder="Search news" value={inputValue} onChange={(e) => setInputValue(e.target.value)}></input>
-                <Button type="submit" $primary>Search</Button>
-            </form>
-        </SearchWrapper>
-    )
+const SearchResultDescription = styled.p`
+  font-size: 18px;
+  margin-bottom: 10px;
+`;
+
+function SearchButton({ handleSearch }) {
+  const [inputValue, setInputValue] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  const displaySearchResults = () => {
+    return searchResults.map((result) => (
+      <SearchResultItem key={result.title}>
+        <SearchResultTitle>{result.title}</SearchResultTitle>
+        <SearchResultDescription>{result.description}</SearchResultDescription>
+      </SearchResultItem>
+    ));
+  };
+
+  return (
+    <div>
+      <SearchWrapper>
+        <SearchInput
+          type="text"
+          placeholder="Search news"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
+        <SearchButtonStyled
+          type="submit"
+          onClick={async (e) => {
+            e.preventDefault();
+            setInputValue("");
+
+            const response = await fetch(
+              `https://newsapi.org/v2/everything?q=${inputValue}&apiKey=615ef18cc55246f1b0516267e5a55737`
+            );
+            const data = await response.json();
+
+            setSearchResults(data.articles);
+
+            const articleTitle = data.articles[0].title;
+            console.log(articleTitle); // prints the title of the first article in the response
+          }}
+        >
+          Search
+        </SearchButtonStyled>
+      </SearchWrapper>
+      {searchResults.length > 0 && (
+        <SearchResultWrapper>
+          {searchResults.slice(1).map((result) => (
+            <SearchResultItem key={result.title}>
+              <SearchResultTitle>{result.title}</SearchResultTitle>
+              <SearchResultDescription>{result.description}</SearchResultDescription>
+            </SearchResultItem>
+          ))}
+        </SearchResultWrapper>
+      )}
+    </div>
+  );
 }
 
 export default SearchButton;

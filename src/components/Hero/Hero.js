@@ -1,3 +1,4 @@
+
 import React from "react";
 import styled from 'styled-components';
 
@@ -7,7 +8,7 @@ const HeroContainer = styled.div`
   align-items: center;
   background-image: url('https://images.pexels.com/photos/5784807/pexels-photo-5784807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   background-position: center;
-  background-size: fit;
+  background-size: center;
   height: 500px;
   padding-bottom:10px;
 `;

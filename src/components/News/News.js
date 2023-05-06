@@ -57,8 +57,19 @@ const NewsLink = styled.a`
   }
 `;
 
+const SearchBar = styled.input`
+  width: 50%;
+  height: 30px;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+`;
+
 function News() {
   const [news, setNews] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     const url =
@@ -69,11 +80,20 @@ function News() {
       .catch((error) => console.log(error));
   }, []);
 
+  const handleSearch = (event) => {
+    setSearchQuery(event.target.value);
+  }
+
+  const filteredNews = news.filter(article => {
+    return article.title.toLowerCase().includes(searchQuery.toLowerCase());
+  });
+
   return (
     <NewsContainer>
       <NewsHeading>TOP HEADLINES</NewsHeading>
+      <SearchBar type="text" placeholder="Search articles..." value={searchQuery} onChange={handleSearch} />
       <NewsList>
-        {news.map((article) => (
+        {filteredNews.map((article) => (
           <NewsItem key={article.title}>
             <NewsTitle>{article.title}</NewsTitle>
             <NewsDescription>{article.description}</NewsDescription>

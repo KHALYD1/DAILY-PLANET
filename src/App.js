@@ -1,17 +1,26 @@
-import './App.css';
-import React from 'react';
-import ReactDOM from 'react-dom';
 
-import { useState } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
 
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import styled from 'styled-components';
 
-import SearchButton from './components/SearchButton/SearchButton';import Navbar from './components/Navbar/Navbar';
+import SearchButton from './components/SearchButton/SearchButton';
+import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Aboutus from './components/About Us/Aboutus';
 import News from './components/News/News';
 import Hero from './components/Hero/Hero';
+
+const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
+const ContentContainer = styled.div`
+  flex-grow: 1;
+`;
+
 function App() {
   const [searchResults, setSearchResults] = useState([]);
   const handleSearch = (data) => {
@@ -19,40 +28,21 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Navbar />
-      <SearchButton handleSearch={handleSearch} />
-      <ul>
-        {searchResults.map((result) => (
-          <li key={result.id}>{result.title}</li>
-        ))}
-      </ul>
-      <Hero />
-      <News />
-      <header className="App-header">
-        <Aboutus />
-      </header>
-    </div>
+    <BrowserRouter>
+      <MainContainer>
+        <Navbar />
+        <ContentContainer>
+          <Routes>
+            <Route exact path="/" element={<Hero />} />
+            <Route exact path="/hero" element={<Hero />} />
+            <Route exact path="/aboutus" element={<Aboutus />} />
+            <Route exact path="/news" element={<News />} />
+          </Routes>
+        </ContentContainer>
+        <Footer />
+      </MainContainer>
+    </BrowserRouter>
   );
 }
 
-ReactDOM.render(
-  <App>
-  <BrowserRouter>
-      <Route exact path="/aboutus">
-        <Aboutus />
-      </Route>
-      <Route exact path="/news">
-        <News />
-      </Route>
-      <Route exact path="/footer">
-        <Footer />
-      </Route>
-      <Route exact path="/">
-      </Route>
-  </BrowserRouter>
-  </App>,
-  document.getElementById('root')
-);
 export default App;
-

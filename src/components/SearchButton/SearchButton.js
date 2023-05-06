@@ -6,7 +6,7 @@ const SearchWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f2f2f2;
+  background-color: grey;
   padding: 10px;
 `;
 
@@ -22,7 +22,7 @@ const SearchButtonStyled = styled.button`
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
-  background-color: #333;
+  background-color: black;
   color: #fff;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
